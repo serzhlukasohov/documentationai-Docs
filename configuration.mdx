@@ -1,0 +1,142 @@
+---
+title: Customization and Settings
+description: Configure your documentation space to match your branding and preferences.
+---
+
+## Overview
+
+Customize Serhii Lukashov's documentation space to align with your brand identity and operational needs. You adjust colors, manage access, structure navigation, and set up backups through intuitive UI panels or configuration files. Start with brand themes for immediate visual impact, then secure your space with permissions.
+
+<Columns cols={3}>
+  <Card title="Brand Colors" icon="palette" href="#brand-colors">
+    Apply your hex color like `#3B82F6`.
+  </Card>
+  <Card title="Permissions" icon="shield" href="#permissions">
+    Control who edits and views docs.
+  </Card>
+  <Card title="Navigation" icon="menu" href="#navigation">
+    Build custom menus and sidebars.
+  </Card>
+  <Card title="Backups" icon="database" href="#backups">
+    Enable version control and exports.
+  </Card>
+</Columns>
+
+## Brand Colors and Themes
+
+Set your primary brand color to `#3B82F6` for buttons, links, and accents. Access the theme editor in your dashboard at `https://dashboard.example.com/settings/theme`.
+
+<Steps>
+  <Step title="Open Theme Settings" icon="settings">
+    Navigate to Dashboard > Settings > Theme.
+  </Step>
+  <Step title="Enter Brand Color">
+    Input your hex code in the Primary Color field.
+  </Step>
+  <Step title="Preview and Save">
+    Preview changes live, then click Save.
+  </Step>
+</Steps>
+
+For advanced theming, edit `config.json`:
+
+<CodeGroup tabs="JSON,YAML">
+  ```json
+  {
+    "theme": {
+      "primaryColor": "#3B82F6",
+      "secondaryColor": "#1D4ED8"
+    }
+  }
+  ```
+  ```yaml
+  theme:
+    primaryColor: "#3B82F6"
+    secondaryColor: "#1D4ED8"
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Test colors in dark and light modes before saving to ensure readability.
+</Callout>
+
+## User Permissions
+
+Define roles to control access. Admins manage everything, editors update content, and viewers read only.
+
+| Role     | Can Edit | Can Delete | Can Invite Users |
+|----------|----------|------------|------------------|
+| Admin    | Yes     | Yes       | Yes             |
+| Editor   | Yes     | No        | No              |
+| Viewer   | No      | No        | No              |
+
+<Steps>
+  <Step title="Add User" icon="users">
+    Go to Settings > Users > Invite.
+  </Step>
+  <Step title="Assign Role">
+    Select role from dropdown and send invite.
+  </Step>
+</Steps>
+
+Use `<ParamField>`-style config for fine-grained control in `permissions.json`:
+
+```json
+{
+  "users": [
+    {
+      "email": "user@example.com",
+      "role": "editor",
+      "pages": ["docs/*"]
+    }
+  ]
+}
+```
+
+## Navigation Menus
+
+Tailor your sidebar and top nav. Use the UI builder or YAML config.
+
+<Tabs>
+  <Tab title="UI Builder" icon="mouse-pointer">
+    Drag pages into sidebar slots. Reorder with up/down arrows.
+  </Tab>
+  <Tab title="YAML Config" icon="code">
+    ```yaml
+    navigation:
+      - title: "Home"
+        href: "/"
+      - title: "Docs"
+        children:
+          - title: "Quickstart"
+            href: "/quickstart"
+    ```
+  </Tab>
+</Tabs>
+
+## Backup and Version Control
+
+Protect your docs with automatic backups and Git integration.
+
+<Expandable title="Git Setup" default-open="true">
+  Connect to `https://github.com/your-repo/docs.git`. Push changes automatically or on schedule.
+
+  ```bash
+  git remote add origin https://github.com/your-repo/docs.git
+  git push -u origin main
+  ```
+</Expandable>
+
+<Expandable title="Export Options">
+  Download as PDF, HTML, or Markdown ZIP from Dashboard > Backups.
+</Expandable>
+
+<Callout kind="alert">
+  Enable daily backups to avoid data loss. Review logs at `https://dashboard.example.com/backups`.
+</Callout>
+
+## Troubleshooting
+
+If colors don't apply, clear browser cache and refresh. For permission errors, check role assignments in the users panel. Navigation issues often stem from invalid YAML—validate with online tools.
+
+Your space now reflects your brand. Next, explore [Quickstart](/quickstart) for content creation.

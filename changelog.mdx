@@ -1,0 +1,128 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Serhii Lukashov's documentation platform.
+---
+
+## Recent Updates
+
+Stay informed about new features, bug fixes, and improvements. You receive notifications for breaking changes to ensure smooth upgrades.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation editing
+- Introduced custom brand color support (default: `#3B82F6`)
+- Enabled Mermaid diagram rendering in MDX pages
+
+## Improvements
+
+- Enhanced search with fuzzy matching for faster results
+- Optimized page load times by `>30%`
+- Added keyboard shortcuts for navigation
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "improvement"]}>
+
+## Bug Fixes
+
+- Fixed parsing errors with nested code blocks in JSX components
+- Resolved frontmatter YAML validation issues
+- Corrected icon rendering for Lucide library
+
+## Improvements
+
+- Updated component syntax validation for stricter parsing
+- Improved accessibility with better alt text handling
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core MDX documentation generator
+- Integrated 15+ components including `Update`, `Steps`, and `Callout`
+- Added YAML frontmatter support with automatic validation
+
+## Breaking Changes
+
+- Removed legacy H1 heading support; always start with H2
+- Updated attribute syntax to require double quotes only
+
+To migrate, update your pages to use H2 headings and double-quoted strings in JSX.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade your Serhii Lukashov documentation platform to the latest version.
+
+<Callout kind="alert">
+Check for breaking changes in each release before upgrading. Backup your MDX files.
+</Callout>
+
+<Steps>
+  <Step title="Backup Your Site" icon="database">
+    Create a full backup of your repository.
+
+    ```
+    git add .
+    git commit -m "Backup before upgrade"
+    git push origin main
+    ```
+  </Step>
+
+  <Step title="Update Dependencies" icon="package">
+    <Tabs>
+      <Tab title="npm" icon="npm">
+````bash
+npm install serhii-lukashov-docs@latest
+````
+      </Tab>
+      <Tab title="yarn" icon="yarn">
+````bash
+yarn add serhii-lukashov-docs@latest
+````
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Validate MDX Files" icon="check-circle">
+    Run the built-in validator to check for parsing errors.
+
+    ```
+    npx serhii-lukashov-docs validate ./docs
+    ```
+  </Step>
+
+  <Step title="Deploy" icon="rocket">
+    Build and deploy your updated site.
+
+    ```
+    npm run build
+    npm run deploy
+    ```
+  </Step>
+</Steps>
+
+## Quick Links
+
+<Columns cols={3}>
+  <Card title="Report Issues" icon="bug" href="https://github.com/serhii-lukashov/docs/issues" target="_blank">
+    Found a bug? Open an issue on GitHub.
+  </Card>
+
+  <Card title="Request Features" icon="sparkles" href="https://github.com/serhii-lukashov/docs/discussions" target="_blank">
+    Suggest new components or improvements.
+  </Card>
+
+  <Card title="Full Release Notes" icon="book-open" href="/changelog#recent-updates">
+    View detailed changelogs for all versions.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Migration Guide" default-open="false">
+For sites with custom components, update `{tags={["feature"]}}` syntax to use JSX arrays properly. Test Mermaid diagrams as code blocks, not components.
+</Expandable>

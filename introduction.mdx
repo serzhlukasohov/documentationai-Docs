@@ -1,0 +1,116 @@
+---
+title: Welcome to Serhii Lukashov's Documentation
+description: Discover the overview of your personal documentation space designed for organizing and managing project documentation efficiently.
+---
+
+## Overview
+
+Welcome to Serhii Lukashov's documentation space. You use this platform to organize, manage, and share all your project documentation in one centralized location. It supports rich MDX formatting, interactive components, and seamless version control, making it ideal for developers, teams, and solo creators who need efficient doc workflows.
+
+This space helps you create self-contained pages with over 250 words of detailed content, ensuring every document follows best practices like the EPPO principle (Every Page Produces Output). Start exploring key features, follow the quick start guide, and navigate effortlessly to build your knowledge base.
+
+## Key Features
+
+Serhii Lukashov's documentation offers powerful tools to streamline your workflow. Discover the core capabilities that set it apart.
+
+<Columns cols={3}>
+  <Card title="Rich MDX Components" icon="book-open" href="#components">
+    Use components like `<Callout>`, `<Steps>`, and `<Tabs>` to create engaging, interactive docs without leaving Markdown.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes with Git integration. Every update creates a changelog entry automatically.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="#navigation">
+    Full-text search across all pages. Quick links and hierarchical menus keep you oriented.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Customize your space with brand colors like `#3B82F6` for headers and accents.
+</Callout>
+
+## Quick Start
+
+Get up and running in minutes. Follow these steps to create your first documentation page.
+
+<Steps>
+  <Step title="Create a New Page" icon="plus">
+    Navigate to the docs folder and add a new `.mdx` file, like `quickstart.mdx`.
+
+    Start with YAML frontmatter:
+
+````mdx
+---
+title: Quickstart
+description: Get started quickly.
+---
+````
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Write H2 headings and embed components. Use backticks for special characters like `{variable}` or `<100ms`.
+  </Step>
+  <Step title="Preview & Deploy" icon="eye">
+    Preview locally with `npm run dev`, then push to deploy. Your site updates instantly.
+  </Step>
+</Steps>
+
+## Navigation Guide
+
+Access core sections quickly. Choose your path based on your needs.
+
+<Tabs>
+  <Tab title="Beginner" icon="user">
+    Start here if you're new:
+
+    - [Quickstart](/quickstart)
+    - [Key Concepts](/concepts)
+
+    <CodeGroup tabs="MDX,Markdown">
+```mdx
+## Hello World
+
+Welcome to your docs!
+```
+
+```markdown
+# Simple Markdown
+
+Start writing.
+```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Advanced" icon="code">
+    Dive deeper:
+
+    - [Authentication](/authentication)
+    - [Configuration](/configuration)
+
+    Use `<ParamField path="id" param-type="string" required="true">User ID</ParamField>` for API docs.
+  </Tab>
+</Tabs>
+
+## Getting Support
+
+Need help? You have several resources at your disposal.
+
+<ExpandableGroup>
+  <Expandable title="Community Forum" default-open="true">
+    Join discussions on GitHub Discussions. Search existing threads or post your question.
+  </Expandable>
+  <Expandable title="Documentation Templates">
+    Explore full page examples like `/changelog.mdx` or `/faq.mdx` for inspiration.
+  </Expandable>
+</ExpandableGroup>
+
+<Columns cols={2}>
+  <Card title="GitHub Repo" icon="github" href="https://github.com" target="_blank" cta="Visit Repo">
+    Report issues and contribute.
+  </Card>
+  <Card title="Contact" icon="mail" href="mailto:support@example.com" cta="Email Us">
+    Direct support for premium users.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Bookmark this page and explore `/quickstart` next to build your first project doc.
+</Callout>

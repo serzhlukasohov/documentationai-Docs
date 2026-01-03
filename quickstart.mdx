@@ -1,0 +1,138 @@
+---
+title: Getting Started
+description: Learn how to set up your account and create your first documentation project in under 5 minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- No prior experience required – you'll be up and running in minutes
+
+</Callout>
+
+## Create Your Account
+
+Sign up for Serhii Lukashov in just a few steps. This grants you access to unlimited documentation projects.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.example.com` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email and create a strong password. Use a real email like `you@example.com` for verification.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox and click the verification link. This enables project creation.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Answer a quick survey about your use case (documentation, notes, or knowledge base).
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Enable two-factor authentication immediately after signup for added security.
+</Callout>
+
+## Create a New Project
+
+Once logged in, set up your first documentation space.
+
+<Steps>
+  <Step title="Click New Project" icon="plus">
+    From the dashboard, select **New Project**.
+  </Step>
+  <Step title="Name Your Project" icon="edit-3">
+    Enter a name like `My First Docs` and choose a slug (e.g., `my-first-docs`).
+  </Step>
+  <Step title="Select Template" icon="file-text">
+    Pick the **Blank Documentation** template for a clean start.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Click **Create**. Your project is now live at `https://docs.example.com/my-first-docs`.
+  </Step>
+</Steps>
+
+## Add Your First Document
+
+Add content using the visual editor or MDX. Choose your preferred method below.
+
+<Tabs>
+  <Tab title="Visual Editor" icon="edit">
+    <Steps>
+      <Step title="New Page">
+        Click **+ New Page** in your project sidebar.
+      </Step>
+      <Step title="Edit Content">
+        Type your title and content. Use the toolbar for headings, lists, and embeds.
+      </Step>
+      <Step title="Publish">
+        Hit **Publish** to make it live.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="MDX Editor" icon="code">
+    Write raw MDX for full control.
+
+    <CodeGroup tabs="MDX,Preview">
+    ````mdx
+    ---
+    title: Welcome
+    description: Your first page.
+    ---
+
+    ## Hello World
+
+    This is your first MDX document in Serhii Lukashov.
+    ````
+    ````markdown
+    # Preview (Rendered)
+
+    ## Hello World
+
+    This is your first MDX document in Serhii Lukashov.
+    ````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+## Basic Interface Tour
+
+Explore the key areas of the Serhii Lukashov interface.
+
+<Columns cols={3}>
+  <Card title="Sidebar" icon="menu" href="#sidebar">
+    Navigate projects, pages, and settings.
+  </Card>
+  <Card title="Editor" icon="edit-3" href="#editor">
+    Real-time preview and collaboration tools.
+  </Card>
+  <Card title="Preview" icon="eye" href="#preview">
+    Live site preview with custom domains.
+  </Card>
+</Columns>
+
+## Next Steps
+
+<Callout kind="success">
+  Congratulations! You've created your first documentation project. Dive deeper with these guides:
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Customize Your Docs" icon="settings" href="/configuration">
+    Learn advanced theming and layouts.
+  </Card>
+  <Card title="Collaborate with Team" icon="users" href="/authentication">
+    Invite members and manage permissions.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/introduction">
+    Integrate with Git for backups.
+  </Card>
+  <Card title="Export & Migrate" icon="download" href="/changelog">
+    Export to Markdown or HTML.
+  </Card>
+</Columns>
